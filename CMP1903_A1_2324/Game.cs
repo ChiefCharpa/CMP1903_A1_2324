@@ -16,6 +16,14 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        public int Rolling ()
+        {
+            Die Die1 = new Die();
+            Die Die2 = new Die();
+            Die Die3 = new Die();
 
+            int Die1Roll = Die1.Roll();
+            return 1;
+        }   
     }
 }

@@ -16,5 +16,12 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        public void runCode()
+        {
+            Die Die1 = new Die();
+            Console.WriteLine(Die1.Roll());
+        }
     }
-}
+}   
+
+
