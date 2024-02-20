@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace CMP1903_A1_2324
 {
@@ -16,14 +17,23 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        public int Rolling ()
+        public int Rolling (int i)
         {
-            Die Die1 = new Die();
-            Die Die2 = new Die();
-            Die Die3 = new Die();
+            Die die = new Die();
+            int DieRoll = die.Roll();
+            Console.WriteLine(DieRoll);
+            int Total = 0;
+            if (i > 0) 
+            { 
+                Total = Rolling (i-1);
+            }
+            Total = Total + DieRoll;
+            //Die Die1 = new Die();
+            //Die Die2 = new Die();
+            //Die Die3 = new Die();
 
-            int Die1Roll = Die1.Roll();
-            return 1;
+            //int Die1Roll = Die1.Roll();
+            return Total ;
         }   
     }
 }
