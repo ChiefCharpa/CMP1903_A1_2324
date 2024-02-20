@@ -36,10 +36,5 @@ namespace CMP1903_A1_2324
             return Total ;
         }   
 
-        public void Statistics (int i, int j) 
-        {
-            float Mean = j / i;
-            Console.WriteLine($"The average mean of the dice is: {Mean}");
-        }
     }
 }

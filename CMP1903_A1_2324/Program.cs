@@ -15,10 +15,11 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
             Game game = new Game();
+            Statistics statistics = new Statistics();   
             int gameResult = game.Rolling(3);
             Console.WriteLine($"The total of the 3 dice is: {gameResult}");
 
-            game.Statistics(3, gameResult);
+            statistics.Mean(3, gameResult);
 
             Testing testing = new Testing();
             testing.runCode();
