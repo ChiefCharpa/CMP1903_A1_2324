@@ -39,8 +39,6 @@ namespace CMP1903_A1_2324
                 Random rnd = new Random();
                 // Creates a random number between 1 and 6 for the dice roll
                 RollNumber = rnd.Next(1, 7);
-                Console.WriteLine($"The true random is {rnd.Next(1, 7)}");
-                Console.WriteLine(RollNumber);
                 // returns the value stored by the dice roll in the private variable
                 return RollNumber;
             }

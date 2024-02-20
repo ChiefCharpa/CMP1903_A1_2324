@@ -16,8 +16,9 @@ namespace CMP1903_A1_2324
              */
             Game game = new Game();
             int gameResult = game.Rolling(3);
-            Console.WriteLine(gameResult);
+            Console.WriteLine($"The total of the 3 dice is: {gameResult}");
 
+            game.Statistics(3, gameResult);
 
             Testing testing = new Testing();
             testing.runCode();

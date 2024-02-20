@@ -23,7 +23,7 @@ namespace CMP1903_A1_2324
             int DieRoll = die.Roll();
             Console.WriteLine(DieRoll);
             int Total = 0;
-            if (i > 0) 
+            if (i > 1) 
             { 
                 Total = Rolling (i-1);
             }
@@ -35,5 +35,11 @@ namespace CMP1903_A1_2324
             //int Die1Roll = Die1.Roll();
             return Total ;
         }   
+
+        public void Statistics (int i, int j) 
+        {
+            float Mean = j / i;
+            Console.WriteLine($"The average mean of the dice is: {Mean}");
+        }
     }
 }
