@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
@@ -32,10 +33,14 @@ namespace CMP1903_A1_2324
             //Method
             public int Roll()
             {
+                int millisecond = 200;
+                Thread.Sleep(millisecond);
                 // Instantiates an instance of the class random
                 Random rnd = new Random();
                 // Creates a random number between 1 and 6 for the dice roll
                 RollNumber = rnd.Next(1, 7);
+                Console.WriteLine($"The true random is {rnd.Next(1, 7)}");
+                Console.WriteLine(RollNumber);
                 // returns the value stored by the dice roll in the private variable
                 return RollNumber;
             }
