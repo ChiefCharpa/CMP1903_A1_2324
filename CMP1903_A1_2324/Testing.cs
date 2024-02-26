@@ -19,7 +19,7 @@ namespace CMP1903_A1_2324
         public void runCode()
         {
             Die Die1 = new Die();
-            Console.WriteLine(Die1.Roll());
+            Die1.Roll();
         }
     }
 }   

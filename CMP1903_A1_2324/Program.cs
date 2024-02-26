@@ -16,10 +16,8 @@ namespace CMP1903_A1_2324
              */
             Game game = new Game();
             Statistics statistics = new Statistics();   
-            int gameResult = game.Rolling(3);
-            Console.WriteLine($"The total of the 3 dice is: {gameResult}");
-
-            statistics.Mean(3, gameResult);
+            //int gameResult = game.Rolling(3);
+            game.RollingContinuous(true);
 
             Testing testing = new Testing();
             testing.runCode();
