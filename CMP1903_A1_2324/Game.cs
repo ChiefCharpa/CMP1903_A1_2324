@@ -22,27 +22,9 @@ namespace CMP1903_A1_2324
 
 
         //Methods
-        public int Rolling (int i)
-        {
-            Die die = new Die();
-            die.Roll();
-            int DieRoll = die.RollNumber;
-            storedRolls.Append(DieRoll);
-            Console.WriteLine(DieRoll);
-            int Total = 0;
-            if (i > 1) 
-            { 
-                Total = Rolling (i-1);
-            }
-            //Die Die1 = new Die();
-            //Die Die2 = new Die();
-            //Die Die3 = new Die();
 
-            //int Die1Roll = Die1.Roll();
-            return Total ;
-        }
-
-        public void RollingContinuous(bool Val)
+        // Acts to rolls dice 3 at a time until the user stops the rolling
+        public void RollingContinuous(bool Val, bool TestRun = false)
         {
             
             while (Val == true)
@@ -64,21 +46,29 @@ namespace CMP1903_A1_2324
                 }
                 Console.WriteLine();
                 Console.WriteLine($"The current total of the dice is: {Total}");
-                statistics.Mean(storedRolls);
-                Console.WriteLine($"The current mode of the dice is: {statistics.Mode(storedRolls)}");
                 Console.WriteLine();
-                Console.WriteLine("Do you want to roll 3 more dice: X to quit");
-                try
+                if (TestRun)
                 {
-                    string InputtedValue = Console.ReadLine();
-                    if (InputtedValue == "x" || InputtedValue == "X") 
-                    {
-                        Val = false;
-                    }
+                    Val = false;
                 }
-                catch (Exception ex) 
-                {}
-                
+                else
+                {
+                    
+                    statistics.Mean(storedRolls);
+                    Console.WriteLine($"The current mode of the dice is: {statistics.Mode(storedRolls)}");
+                    Console.WriteLine();
+                    Console.WriteLine("Do you want to roll 3 more dice: X to quit");
+                    try
+                    {
+                        string InputtedValue = Console.ReadLine();
+                        if (InputtedValue == "x" || InputtedValue == "X")
+                        {
+                            Val = false;
+                        }
+                    }
+                    catch (Exception)
+                    { }
+                }
             }
         }
 

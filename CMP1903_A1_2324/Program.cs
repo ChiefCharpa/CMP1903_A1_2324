@@ -10,7 +10,21 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-
+            bool valid = false;
+            while (!valid)
+            {
+                Console.WriteLine("Do you want to run the test: Y or N");
+                try
+                {
+                    string InputtedValue = Console.ReadLine();
+                    if (InputtedValue == "Y" || InputtedValue == "X")
+                    {
+                        
+                    }
+                }
+                catch (Exception ex)
+                { }
+            }
             Testing testing = new Testing();
             testing.TestCode();
             /*
