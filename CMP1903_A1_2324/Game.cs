@@ -44,6 +44,7 @@ namespace CMP1903_A1_2324
 
         public void RollingContinuous(bool Val)
         {
+            
             while (Val == true)
             {
                 Die die = new Die();

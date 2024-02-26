@@ -10,17 +10,16 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
+
+            Testing testing = new Testing();
+            testing.TestCode();
             /*
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
             Game game = new Game();
-            Statistics statistics = new Statistics();   
-            //int gameResult = game.Rolling(3);
             game.RollingContinuous(true);
 
-            Testing testing = new Testing();
-            testing.runCode();
         }
     }
 }
