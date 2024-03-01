@@ -51,11 +51,10 @@ namespace CMP1903_A1_2324
             int[] TestingRolls = { 1, 2, 2, 2, 3, 4, 6, 6 };
 
             // Creates an instance of Statistics class
-            Statistics stats = new Statistics();
             // calls the Mean method passing a bool to run the testing code
-            stats.Mean(TestingRolls,true);
+            game.Mean(TestingRolls,true);
             // Calls and prints the Mode method along with passing booln variable to call the testing code
-            Console.WriteLine($"The current mode of the dice is: {stats.Mode(TestingRolls, true)}");
+            Console.WriteLine($"The current mode of the dice is: {game.Mode(TestingRolls, true)}");
 
             /*
              * Expected Values

@@ -42,8 +42,7 @@ namespace CMP1903_A1_2324
                 * Due to random changing every clock tick a pause timer is required, 
                 * so before calling random a timer of 200 miliseconds is called to allow a new random number tyo be generated
                 */
-                int millisecond = 500;
-                Thread.Sleep(millisecond);
+                Thread.Sleep(500);
                 // Instantiates an instance of the class random
                 Random rnd = new Random();
                 // Creates a random number between 1 and 6 for the dice roll and assigns the value to the private variable _RollNumber
