@@ -16,16 +16,16 @@ namespace CMP1903_A1_2324
             while (!valid)
             {
                 // A string variable InputtedValue is instantiated as an empty string
-                string InputtedValue = "";
+                string inputtedValue = "";
                 // An output is produced in the console window asking if the user wants to run a test
                 Console.WriteLine("Do you want to run the test: Y or N");
                 // Try is used to ensure the user inputs a valid input and prevents any possible crashes
                 try
                 {
                     // The users input is taken and is attempted to be stored as a string in InputtedValue
-                    InputtedValue = Console.ReadLine();
+                    inputtedValue = Console.ReadLine();
                     // The input is compared with the two valid answers and if it does valid is set to true
-                    if (InputtedValue == "Y" || InputtedValue == "N")
+                    if (inputtedValue == "Y" || inputtedValue == "N")
                     {
                         valid = true;
                     }
@@ -44,7 +44,7 @@ namespace CMP1903_A1_2324
                 if (valid)
                 {
                     // Compares the players input and if the value matches run the nested code
-                    if (InputtedValue == "Y")
+                    if (inputtedValue == "Y")
                     {
                         // Instaniates an object of the class testing
                         Testing testing = new Testing();

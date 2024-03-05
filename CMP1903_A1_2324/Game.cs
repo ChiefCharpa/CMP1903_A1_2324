@@ -17,7 +17,7 @@ namespace CMP1903_A1_2324
          * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
-        private int[] storedRolls = { };
+        private int[] _storedRolls = { };
 
 
 
@@ -115,22 +115,22 @@ namespace CMP1903_A1_2324
     
 
     // Acts to rolls dice 3 at a time until the user stops the rolling
-        public void RollingContinuous(bool Val, bool TestRun = false)
+        public void RollingContinuous(bool val, bool testRun = false)
         {
             // Takes the first boolean parameter and whilst Val is true iterate the while loop
-            while (Val == true)
+            while (val == true)
             {
                 // Creates instance of the die class
                 Die die1 = new Die();
                 // calls the roll method Roll for the Die class for the instance
                 die1.Roll();
                 // The stored variable is called and its value is stored in the DieRoll variable
-                int DieRoll = die1.RollNumber;
+                int DieRoll = die1.rollNumber;
                 // The value stored in DieRoll is appended to the array storedRolls
-                storedRolls = storedRolls.Append(DieRoll).ToArray();
+                _storedRolls = _storedRolls.Append(DieRoll).ToArray();
                 // Outputs the current dice number with the dices curtrent value
                 Console.WriteLine();
-                Console.WriteLine($"Dice {storedRolls.Count()} rolled a {DieRoll}");
+                Console.WriteLine($"Dice {_storedRolls.Count()} rolled a {DieRoll}");
                 /*
                     for (int i = 0; i < 3; i++) 
                     {
@@ -146,28 +146,28 @@ namespace CMP1903_A1_2324
                 // calls the roll method Roll for the Die class for the instance
                 die2.Roll();
                 // The stored variable is called and its value is stored in the DieRoll variable
-                DieRoll = die2.RollNumber;
+                DieRoll = die2.rollNumber;
                 // The value stored in DieRoll is appended to the array storedRolls
-                storedRolls = storedRolls.Append(DieRoll).ToArray();
+                _storedRolls = _storedRolls.Append(DieRoll).ToArray();
                 // Outputs the current dice number with the dices curtrent value
                 Console.WriteLine();
-                Console.WriteLine($"Dice {storedRolls.Count()} rolled a {DieRoll}");
+                Console.WriteLine($"Dice {_storedRolls.Count()} rolled a {DieRoll}");
                 // Creates instance of the die class
                 Die die3 = new Die();
                 // calls the roll method Roll for the Die class for the instance
                 die3.Roll();
                 // The stored variable is called and its value is stored in the DieRoll variable
-                DieRoll = die3.RollNumber;
+                DieRoll = die3.rollNumber;
                 // The value stored in DieRoll is appended to the array storedRolls
-                storedRolls = storedRolls.Append(DieRoll).ToArray();
+                _storedRolls = _storedRolls.Append(DieRoll).ToArray();
                 // Outputs the current dice number with the dices curtrent value
                 Console.WriteLine();
-                Console.WriteLine($"Dice {storedRolls.Count()} rolled a {DieRoll}");
+                Console.WriteLine($"Dice {_storedRolls.Count()} rolled a {DieRoll}");
 
                 // instantiates a variable to store the total of the dice
                 int Total = 0;
                 // iterates through the list adding each roll stored to the total variable
-                foreach (int previousRoll in storedRolls)
+                foreach (int previousRoll in _storedRolls)
                 {
                     Total = Total + previousRoll;
                 }
@@ -176,16 +176,16 @@ namespace CMP1903_A1_2324
                 Console.WriteLine($"The current total of the dice is: {Total}");
                 Console.WriteLine();
                 // checks to see if the method is being called in test mode and setting the loop to end accordingly
-                if (TestRun)
+                if (testRun)
                 {
-                    Val = false;
+                    val = false;
                 }
                 else
                 {
                     // if not in test mode the method Mean is called passing the array of stored rolls as a parameter
-                    Mean(storedRolls);
+                    Mean(_storedRolls);
                     // The method mode is then called passing the stored array and outputting the result in the console window
-                    Console.WriteLine($"The current mode of the dice is: {Mode(storedRolls)}");
+                    Console.WriteLine($"The current mode of the dice is: {Mode(_storedRolls)}");
                     Console.WriteLine();
                     // An output is produced in the console asking if they want to roll 3 more dice
                     Console.WriteLine("Do you want to roll 3 more dice: X to quit");
@@ -197,7 +197,9 @@ namespace CMP1903_A1_2324
                         // If the inputed value is an x Val is set to false ending the while loop 
                         if (InputtedValue == "x" || InputtedValue == "X")
                         {
-                            Val = false;
+                            val = false;
+                            // A final message is produced in the command window to signify the end of the program
+                            Console.WriteLine("Program end.");
                         }
                         else
                         {

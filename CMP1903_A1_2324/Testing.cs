@@ -25,11 +25,14 @@ namespace CMP1903_A1_2324
 
             // Creates instance of the Die Class
             Console.WriteLine("Die Test");
-            Die Die1 = new Die();
+            Die die1 = new Die();
             // The expected output is between 1 - 6
-            Die1.Roll();
-            Debug.Assert(0 < Die1.RollNumber && Die1.RollNumber < 7);
+            die1.Roll();
+            Debug.Assert(0 < die1.rollNumber && die1.rollNumber < 7);
             // The actual number is between 1 - 6 so matches the expectation
+
+            // outputs completed to tell user that that the given dice roll is within the acceptable range
+            Console.WriteLine("Completed");
 
 
 
@@ -43,18 +46,26 @@ namespace CMP1903_A1_2324
             /*
              * prints 3 rolled dice with the correct total being displayed
              */
-
+            // outputs completed to tell user that that the given dice roll correctly total to the expected value
+            Console.WriteLine("Completed");
 
             // Tests to ensure that the statistical functions calculate the expected outputs for the known array
             Console.WriteLine("Statistic Test");
             // Test array so we can determine that the logic works correctly
-            int[] TestingRolls = { 1, 2, 2, 2, 3, 4, 6, 6 };
+            int[] testingRolls = { 1, 2, 2, 2, 3, 4, 6, 6 };
 
             // Creates an instance of Statistics class
             // calls the Mean method passing a bool to run the testing code
-            game.Mean(TestingRolls,true);
+            game.Mean(testingRolls,true);
             // Calls and prints the Mode method along with passing booln variable to call the testing code
-            Console.WriteLine($"The current mode of the dice is: {game.Mode(TestingRolls, true)}");
+            Console.WriteLine($"The current mode of the dice is: {game.Mode(testingRolls, true)}");
+
+            // outputs completed to tell user that that the given values produce the correct mean mode and median
+            Console.WriteLine("Completed");
+
+            // Signifies the end of the test is successful
+            Console.WriteLine("End of Test.");
+            Console.WriteLine("---------------------------");
 
             /*
              * Expected Values
@@ -65,7 +76,7 @@ namespace CMP1903_A1_2324
              * The codes output matches the expected values
              * 
              */
-
+            
         }
     }
 }   
