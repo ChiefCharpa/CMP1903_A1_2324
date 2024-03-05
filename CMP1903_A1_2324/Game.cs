@@ -203,13 +203,13 @@ namespace CMP1903_A1_2324
                         }
                         else
                         {
-                            Console.WriteLine("Continue code. ");
+                            throw new Exception();
                         }
                     //if inputted value was invalid or not x the program will roll 3 more dice
                     }
                     catch (Exception)
                     {
-                        
+                        Console.WriteLine("X has not been inputted, rolling 3 more dice. ");
                     }
                 }
             }

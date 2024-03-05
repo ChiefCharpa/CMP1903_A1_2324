@@ -24,6 +24,8 @@ namespace CMP1903_A1_2324
                 {
                     // The users input is taken and is attempted to be stored as a string in InputtedValue
                     inputtedValue = Console.ReadLine();
+                    // Sets the given input to uppercase
+                    inputtedValue = inputtedValue.ToUpper();
                     // The input is compared with the two valid answers and if it does valid is set to true
                     if (inputtedValue == "Y" || inputtedValue == "N")
                     {
@@ -31,7 +33,7 @@ namespace CMP1903_A1_2324
                     }
                     else
                     {
-                        Console.WriteLine("Invalid character. Must be Y or X. ");
+                        throw new Exception();
                     }
                 }
                 // If an error is produced in try no code will be executed repeating the while loop
