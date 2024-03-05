@@ -199,10 +199,16 @@ namespace CMP1903_A1_2324
                         {
                             Val = false;
                         }
+                        else
+                        {
+                            Console.WriteLine("Continue code. ");
+                        }
                     //if inputted value was invalid or not x the program will roll 3 more dice
                     }
                     catch (Exception)
-                    { }
+                    {
+                        
+                    }
                 }
             }
         }

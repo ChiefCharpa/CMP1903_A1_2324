@@ -29,10 +29,16 @@ namespace CMP1903_A1_2324
                     {
                         valid = true;
                     }
+                    else
+                    {
+                        Console.WriteLine("Invalid character. Must be Y or X. ");
+                    }
                 }
                 // If an error is produced in try no code will be executed repeating the while loop
                 catch (Exception ex)
-                { }
+                {
+                    Console.WriteLine("Invalid input, must be a character and be Y or X.");
+                }
 
                 // if the input was valid then the input is compared otherwise the code skips to the start of the while loop
                 if (valid)
